@@ -1,0 +1,21 @@
+<h2>Customer Data</h2>
+<ul>
+  {% for data in parsed_data_objects %}
+    <li>Booking ID: {{ data.booking_id }}</li>
+    <li>Vehicle model No: {{ data.vehicle_model_no }}</li>
+    <li>model name: {{ data.model_name }}</li>
+    <li>name of the customer : {{ data.name_of_the_customer }}</li>
+    <li>mobile: {{ data.mobile }}</li>
+    <li>email id : {{ data.email_id }}</li>
+    <!-- Display other parsed data -->
+  {% endfor %}
+</ul> 
+
+<h2>Uploaded Files:</h2>
+<ul>
+    {% for uploaded_file in uploaded_files %}
+        <li>{{ uploaded_file.file.name }}</a></li>
+    {% endfor %}
+</ul>
+
+

@@ -1,0 +1,31 @@
+ <h1>Correct Data</h1>
+ <form method="POST" action="/correct/"enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ parsed_data_form.as_p }}
+    <input type="file" name="uploaded_files" multiple>
+    <button type="submit">Save Corrected Data</button>
+  </form>
+  
+  
+   
+
+   {% comment %} {% block content %}
+   <h1>Correct Data</h1>
+   <form method="POST" action="{% url 'correct_data' %}">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit">Save Corrected Data</button>
+   </form>
+   
+   <h2>Parsed Data</h2>
+   <ul>
+       <li>Booking ID: {{ parsed_data.booking_id }}</li>
+       <li>Vehicle Model No: {{ parsed_data.vehicle_model_no }}</li>
+       <li>Model Name: {{ parsed_data.model_name }}</li>
+       <li>Name of the Customer: {{ parsed_data.name_of_the_customer }}</li>
+       <li>Mobile: {{ parsed_data.mobile }}</li>
+       <li>Email ID: {{ parsed_data.email_id }}</li>
+   </ul>
+   {% endblock %}    {% endcomment %}
+
+

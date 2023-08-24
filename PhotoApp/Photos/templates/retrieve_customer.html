@@ -1,0 +1,16 @@
+{% comment %} <form method="POST">
+    {% csrf_token %}
+    <label for="mobile_number">Enter Mobile Number:</label>
+    <input type="text" id="mobile_number" name="mobile_number">
+    <button type="submit">Retrieve Customer Data</button>
+  </form>
+   {% endcomment %}
+
+   <h1>Retrieve Data</h1>
+   <form method="POST">
+       {% csrf_token %}
+       <label for="mobile_number">Enter Mobile Number:</label>
+       <input type="text" name="mobile_number" required>
+       <button type="submit">Retrieve Data</button>
+   </form>
+     
