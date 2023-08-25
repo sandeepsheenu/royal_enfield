@@ -1,3 +1,5 @@
+<a href="http://127.0.0.1:8000/upload/">To add more data click me</a> <br>
+<a href="http://127.0.0.1:8000/retrieve/">To retrieve data  click me</a>
 <h2>Customer Data</h2>
 <ul>
   {% for data in parsed_data_objects %}
@@ -13,9 +15,12 @@
 
 <h2>Uploaded Files:</h2>
 <ul>
-    {% for uploaded_file in uploaded_files %}
+  {% for uploaded_file in uploaded_files %}
+  <li><a href="{{ uploaded_file.file.url }}" target="_blank">{{ uploaded_file.file.name }}</a></li>
+  {% endfor %}
+    {% comment %} {% for uploaded_file in uploaded_files %}
         <li>{{ uploaded_file.file.name }}</a></li>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
 </ul>
 
 
