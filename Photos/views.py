@@ -1,11 +1,10 @@
 import requests
 import re
 import PyPDF2
-
 # Create your views here.
 from django.shortcuts import render, get_object_or_404, redirect
-from Photos.models import ParsedData,UploadedFile
-from Photos.forms import PDFUploadForm, ParsedDataForm
+from .models import Customer, ParsedData,UploadedFile
+from .forms import PDFUploadForm, ParsedDataForm
 import pdfplumber
 from io import BytesIO
 from django.urls import reverse
