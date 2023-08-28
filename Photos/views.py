@@ -18,7 +18,7 @@ from base64 import b64encode
 from pdf2image import convert_from_path
 from PyPDF2 import PdfReader
 
-api_key = "AIzaSyCb3mOzubkjltCjePWIE6rruDroqb4ukew"
+api_key = "ur apikey"
 ENDPOINT_URL = 'https://vision.googleapis.com/v1/images:annotate'
 
 
